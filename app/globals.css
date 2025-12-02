@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-ghost-bg-dark text-ghost-text-primary;
+    font-family: 'Inter', system-ui, sans-serif;
+    background: linear-gradient(135deg, #050015 0%, #120026 50%, #0a0020 100%);
+    min-height: 100vh;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: rgba(18, 0, 38, 0.5);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #FF2EC9 0%, #3DFFFF 100%);
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #FF2EC9 20%, #3DFFFF 80%);
+  }
+}
+
+@layer components {
+  .glass-effect {
+    @apply backdrop-blur-md;
+    background: rgba(18, 0, 38, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .neon-text {
+    text-shadow: 0 0 10px rgba(255, 46, 201, 0.5), 0 0 20px rgba(255, 46, 201, 0.3);
+  }
+
+  .neon-text-cyan {
+    text-shadow: 0 0 10px rgba(61, 255, 255, 0.5), 0 0 20px rgba(61, 255, 255, 0.3);
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, #FF2EC9 0%, #3DFFFF 100%);
+  }
+
+  .neon-border {
+    border: 1px solid transparent;
+    background: linear-gradient(rgba(18, 0, 38, 0.8), rgba(18, 0, 38, 0.8)) padding-box,
+                linear-gradient(135deg, #FF2EC9, #3DFFFF) border-box;
+  }
+
+  .glow-effect {
+    box-shadow: 0 0 30px rgba(255, 46, 201, 0.3), 0 0 60px rgba(61, 255, 255, 0.15);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Wallet adapter overrides */
+.wallet-adapter-button {
+  @apply !bg-transparent !border-none;
+}
+
+.wallet-adapter-modal-wrapper {
+  @apply !bg-ghost-bg-dark/95 !backdrop-blur-xl;
+}
+
+.wallet-adapter-modal-container {
+  @apply !bg-ghost-bg-light !border !border-ghost-border;
+}
+
+.wallet-adapter-modal-title {
+  @apply !text-ghost-text-primary;
+}
+
+.wallet-adapter-modal-list li {
+  @apply !bg-ghost-bg-dark/50;
+}
+
+.wallet-adapter-modal-list li:hover {
+  @apply !bg-ghost-neon-magenta/20;
+}
