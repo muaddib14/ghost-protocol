@@ -14,3 +14,4 @@ export { default as FeatureCard } from './FeatureCard';
 export { default as DashboardMetric } from './DashboardMetric';
 export { default as ProtocolCard } from './ProtocolCard';
 export { default as ToggleSwitch } from './ToggleSwitch';
+export * from './InteractiveBackground';

@@ -1,6 +1,7 @@
 import { Metadata, Viewport } from 'next';
 import { WalletProvider } from '@/components/WalletProvider';
 import { GhostHeader } from '@/components/GhostHeader';
+import { InteractiveBackground } from '@/components/InteractiveBackground';
 import './globals.css';
 
 export const viewport: Viewport = {
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: 'Ghost Protocol' }],
   icons: {
-    icon: '/favicon.ico',
+    icon: '/logo.jpeg',
   },
 };
 
@@ -45,17 +46,8 @@ export default function RootLayout({
           {/* Main Content */}
           <main className="pt-16">{children}</main>
           
-          {/* Background Effects */}
-          <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
-            {/* Top-left glow */}
-            <div className="absolute -top-40 -left-40 w-80 h-80 bg-ghost-neon-magenta/10 rounded-full blur-[100px]" />
-            
-            {/* Bottom-right glow */}
-            <div className="absolute -bottom-40 -right-40 w-80 h-80 bg-ghost-neon-cyan/10 rounded-full blur-[100px]" />
-            
-            {/* Center subtle glow */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-ghost-neon-magenta/5 rounded-full blur-[150px]" />
-          </div>
+          {/* Interactive Background */}
+          <InteractiveBackground />
         </WalletProvider>
       </body>
     </html>
