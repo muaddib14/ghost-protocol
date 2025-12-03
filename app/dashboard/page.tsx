@@ -95,31 +95,31 @@ export default function DashboardPage() {
       name: 'Jupiter',
       description: 'Best swap rates across Solana',
       tags: ['DEX', 'DeFi'],
-      logoColor: '#00D18C',
+      logo: '/jupiter.jpeg',
     },
     {
       name: 'Magic Eden',
       description: 'Leading NFT marketplace',
       tags: ['NFT'],
-      logoColor: '#E42575',
+      logo: '/magic-eden.jpeg',
     },
     {
       name: 'Marinade',
       description: 'Liquid staking protocol',
       tags: ['DeFi'],
-      logoColor: '#00C2FF',
+      logo: '/marinade.jpeg',
     },
     {
       name: 'Wormhole',
       description: 'Cross-chain bridge',
       tags: ['Bridge'],
-      logoColor: '#9945FF',
+      logo: '/wormhole.jpeg',
     },
     {
       name: 'Kamino',
       description: 'Automated liquidity',
       tags: ['DeFi', 'Lending'],
-      logoColor: '#FF6B35',
+      logo: '/kamino.jpeg',
     },
   ];
 

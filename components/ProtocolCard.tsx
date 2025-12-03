@@ -8,7 +8,7 @@ interface ProtocolCardProps {
   name: string;
   description: string;
   tags: string[];
-  logoColor: string;
+  logo: string;
   delay?: number;
 }
 
@@ -20,7 +20,7 @@ export const ProtocolCard: FC<ProtocolCardProps> = ({
   name,
   description,
   tags,
-  logoColor,
+  logo,
   delay = 0,
 }) => {
   const tagColors: Record<string, string> = {
@@ -39,18 +39,14 @@ export const ProtocolCard: FC<ProtocolCardProps> = ({
     >
       <GlassCard className="p-4">
         <div className="flex items-center gap-4">
-          {/* Logo Placeholder */}
-          <motion.div
-            className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl font-bold"
-            style={{
-              background: `linear-gradient(135deg, ${logoColor}30, ${logoColor}10)`,
-              border: `1px solid ${logoColor}40`,
-              color: logoColor,
-            }}
+          {/* Logo */}
+          <motion.img
+            src={logo}
+            alt={`${name} logo`}
+            className="w-12 h-12 rounded-xl object-cover"
             whileHover={{ scale: 1.1 }}
-          >
-            {name.charAt(0)}
-          </motion.div>
+            transition={{ type: 'spring', stiffness: 300 }}
+          />
 
           {/* Content */}
           <div className="flex-1 min-w-0">
